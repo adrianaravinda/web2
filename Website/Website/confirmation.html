@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Confirm Your Order</h1>
+
+    <form id="confirmation-form">
+      <h2>Personal Information</h2>
+      <input type="text" placeholder="Full Name" id="name" required>
+      <input type="email" placeholder="Email" id="email" required>
+
+      <h2>Delivery Information</h2>
+      <input type="text" placeholder="Address" id="address" required>
+      <input type="text" placeholder="City" id="city" required>
+      <input type="text" placeholder="Postal Code" id="postal" required>
+
+      <h2>Payment Information</h2>
+      <input type="text" placeholder="Card Number" id="card" required>
+      <input type="text" placeholder="Expiry Date (MM/YY)" id="expiry" required>
+      <input type="text" placeholder="CVV" id="cvv" required>
+
+      <button type="submit">Pay</button>
+    </form>
+
+    <div id="confirmation-message" class="hidden">
+      <h2>Thank you for your order!</h2>
+      <p>Your order will be delivered within 5 working days.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("confirmation-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const requiredFields = ["name", "email", "address", "city", "postal", "card", "expiry", "cvv"];
+      for (let id of requiredFields) {
+        if (!document.getElementById(id).value.trim()) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+      }
+
+      document.getElementById("confirmation-form").classList.add("hidden");
+      document.getElementById("confirmation-message").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

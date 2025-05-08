@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src="/img/logo.jpg" alt="Logo" /></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="upcoming-games.html">Upcoming Games</a></li>
+          <li><a href="consoles.html">Consoles & Peripherals</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="faq.html">Queries & FAQ</a></li>
+          <li><a href="apps.html">sign-up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="banner">
+        <h1>Welcome to the Ultimate Gaming Hub</h1>
+        <p>
+          Explore an exciting collection of games that will keep you entertained
+          for hours. From thrilling adventures to challenging puzzles, we have
+          it all!
+        </p>
+      </section>
+
+      <section id="games">
+        <h1>Order Your Games</h1>
+        <p>Select the games you want and set the quantity for each.</p>
+
+        <div class="grid">
+          <div class="product" data-name="Fortnite" data-price="60">
+            <img src="../img/games 1" alt="Fortnite" />
+            <p>Fortnite - $60</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-name="Flight Sim" data-price="70">
+            <img src="../img/games 2" alt="Flight sim" />
+            <p>Flight Sim - $70</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-name="Battlefield" data-price="65">
+            <img src="../img/games 3" alt="Battlefield" />
+            <p>Battlefield - $65</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-name="Battle Royale" data-price="50">
+            <img src="../img/g4.jpg" alt="Battle Royale" />
+            <p>Battle Royale - $50</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-name="Fantasy Legends" data-price="80">
+            <img src="../img/g5.jpg" alt="Fantasy Legends" />
+            <p>Fantasy Legends - $80</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-name="Mystery Island" data-price="55">
+            <img src="../img/g6.jpg" alt="Mystery Island" />
+            <p>Mystery Island - $55</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-name="Galactic War" data-price="90">
+            <img src="../img/g7.jpg" alt="Galactic War" />
+            <p>Galactic War - $90</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-name="Treasure Hunt" data-price="45">
+            <img src="../img/g8.jpeg" alt="Treasure Hunt" />
+            <p>Treasure Hunt - $45</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-name="Adventure World" data-price="50">
+            <img src="../img/g9.jpeg" alt="Adventure World" />
+            <p>Adventure World - $50</p>
+            <input type="number" class="quantity" value="0" min="0" />
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <h2>Order Summary</h2>
+        <table id="summary-table">
+          <thead>
+            <tr><th>Game</th><th>Quantity</th><th>Subtotal</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p><strong>Total:</strong> <span id="total-cost">$0</span></p>
+
+        <button onclick="addToFavorites()">Add to Favourites</button>
+        <button onclick="applyFavorites()">Apply Favourites</button>
+        <button onclick="saveOrder(); window.location.href='confirmation.html';">Buy Now</button>
+        <button onclick="clearCart()">Clear Cart</button> 
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="contact">
+          <p>Contact Us:</p>
+          <p>Phone: +94 784503550</p>
+          <p>Email: info@example.com</p>
+        </div>
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="upcoming-games.html">Upcoming Games</a></li>
+            <li><a href="consoles.html">Consoles & Peripherals</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="faq.html">Queries & FAQ</a></li>
+            <li><a href="apps.html">Gaming Apps</a></li>
+          </ul>
+        </div>
+        <div class="socials">
+          <p>Follow Us:</p>
+          <a href="#"><img src="../img/youtube logo" alt="YouTube" /></a>
+          <a href="#"><img src="../img/facebook logo" alt="Facebook" /></a>
+          <a href="#"><img src="../img/instagram logo" alt="Instagram" /></a>
+          <a href="#"><img src="../img/twitter logo" alt="Twitter" /></a>
+        </div>
+      </div>
+      <p>&copy; 2024 Gaming Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Store favorites in localStorage
+      function addToFavorites() {
+        const products = document.querySelectorAll('.product');
+        const favorites = [];
+    
+        products.forEach(product => {
+          const name = product.getAttribute('data-name');
+          const price = parseFloat(product.getAttribute('data-price'));
+          const quantity = parseInt(product.querySelector('.quantity').value);
+    
+          if (quantity > 0) {
+            favorites.push({ name, price, quantity });
+          }
+        });
+    
+        // Save favorites to localStorage
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        alert('Favorites saved!');
+      }
+    
+      // Apply saved favorites from localStorage
+      function applyFavorites() {
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    
+        favorites.forEach(fav => {
+          const productElement = document.querySelector(`[data-name="${fav.name}"]`);
+          if (productElement) {
+            const quantityInput = productElement.querySelector('.quantity');
+            quantityInput.value = fav.quantity;
+          }
+        });
+    
+        updateOrderSummary();  // Update order summary
+      }
+    
+      // Update order summary and total cost
+      function updateOrderSummary() {
+        const summaryTableBody = document.querySelector('#summary-table tbody');
+        const totalCostElement = document.getElementById('total-cost');
+        summaryTableBody.innerHTML = ''; // Clear existing summary
+    
+        let totalCost = 0;
+        const products = document.querySelectorAll('.product');
+    
+        products.forEach(product => {
+          const name = product.getAttribute('data-name');
+          const price = parseFloat(product.getAttribute('data-price'));
+          const quantity = parseInt(product.querySelector('.quantity').value);
+    
+          if (quantity > 0) {
+            const subtotal = price * quantity;
+            totalCost += subtotal;
+    
+            // Add row to summary table
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${name}</td><td>${quantity}</td><td>$${subtotal.toFixed(2)}</td>`;
+            summaryTableBody.appendChild(row);
+          }
+        });
+    
+        totalCostElement.textContent = `$${totalCost.toFixed(2)}`;
+      }
+    
+      // Save the order and redirect to confirmation page
+      function saveOrder() {
+        const orderDetails = [];
+        const products = document.querySelectorAll('.product');
+    
+        products.forEach(product => {
+          const name = product.getAttribute('data-name');
+          const price = parseFloat(product.getAttribute('data-price'));
+          const quantity = parseInt(product.querySelector('.quantity').value);
+    
+          if (quantity > 0) {
+            orderDetails.push({ name, price, quantity });
+          }
+        });
+    
+        localStorage.setItem('order', JSON.stringify(orderDetails)); // Store order in localStorage
+      }
+    
+      // Load the cart from localStorage and update quantities
+      function loadCart() {
+        const savedCart = JSON.parse(localStorage.getItem('order')) || [];
+        
+        savedCart.forEach(item => {
+          const productElement = document.querySelector(`[data-name="${item.name}"]`);
+          if (productElement) {
+            const quantityInput = productElement.querySelector('.quantity');
+            quantityInput.value = item.quantity; // Set saved quantity
+          }
+        });
+    
+        updateOrderSummary();  // Update order summary with loaded cart
+      }
+    
+      // Attach event listeners to "Add to Cart" buttons
+      document.addEventListener('DOMContentLoaded', () => {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            updateOrderSummary();
+            saveCart(); // Save cart to localStorage every time it's updated
+          });
+        });
+    
+        // Load saved cart from localStorage on page load
+        loadCart();
+        
+        // If favorites exist, apply them
+        if (localStorage.getItem('favorites')) {
+          applyFavorites();
+        }
+      });
+    
+      // Save the current cart in localStorage when items are added/updated
+      function saveCart() {
+        const cart = [];
+        const products = document.querySelectorAll('.product');
+    
+        products.forEach(product => {
+          const name = product.getAttribute('data-name');
+          const price = parseFloat(product.getAttribute('data-price'));
+          const quantity = parseInt(product.querySelector('.quantity').value);
+    
+          if (quantity > 0) {
+            cart.push({ name, price, quantity });
+          }
+        });
+    
+        // Save the cart in localStorage
+        localStorage.setItem('order', JSON.stringify(cart));
+      }
+
+      function clearCart() {
+      // Clear quantity inputs
+      const products = document.querySelectorAll('.product');
+      products.forEach(product => {
+        const quantityInput = product.querySelector('.quantity');
+        quantityInput.value = 0;
+      });
+
+      // Clear summary table and total
+      document.querySelector('#summary-table tbody').innerHTML = '';
+      document.getElementById('total-cost').textContent = '$0';
+
+      // Remove cart from localStorage
+      localStorage.removeItem('order');
+    }
+    </script>
+    
+  </body>
+</html>
